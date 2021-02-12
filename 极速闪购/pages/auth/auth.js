@@ -12,6 +12,7 @@ Page({
       address,
       ljPay
     })
+    this.data.ljPay[0].num = 1
   },
   // 获取收货地址
   getAddress() {
