@@ -103,5 +103,9 @@ Page({
     this.setData({
       isCollect
     })
+  },
+  // 立即购买
+  ljPay(){
+    wx.setStorageSync("ljPay", [this.data.goodsInfo]);
   }
 })

@@ -49,6 +49,6 @@
         <!-- 加入购物车 -->
         <view class="add" bindtap="addCart">加入购物车</view>
         <!-- 立即购买 -->
-        <view class="buy">立即购买</view>
+        <navigator class="buy" url="../auth/auth" bindtap="ljPay">立即购买</navigator>
     </view>
 </view>

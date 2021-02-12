@@ -65,6 +65,11 @@
           "pathName": "pages/search/search",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "立即购买",
+          "pathName": "pages/auth/auth",
+          "scene": null
         }
       ]
     }
