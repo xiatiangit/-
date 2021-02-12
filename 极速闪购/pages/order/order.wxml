@@ -12,7 +12,7 @@
                 <!-- 订单价格 -->
                 <view class="price content">
                     <view class="word">订单价格</view>
-                    <view class="value">￥{{item.goods_price}}</view>
+                    <view class="value">￥{{item.goods_price*item.num}}</view>
                 </view>
                 <!-- 订单日期 -->
                 <view class="time content">
