@@ -1,0 +1,58 @@
+<view class="zhifu">
+    <!-- 收货地址 -->
+    <view class="address">
+        <view class="shouhuoren">
+            <view class="left">
+                <!-- 收货人姓名 -->
+                <view class="name">收货人:{{address.userName}}</view>
+                <!-- 收货人地址 -->
+                <view class="dizhi">{{address.provinceName}}{{address.cityName}}{{address.countyName}}{{address.detailInfo}}</view>
+            </view>
+            <!-- 收货人电话 -->
+            <view class="dianhua">{{address.telNumber}}</view>
+        </view>
+    </view>
+    <!-- 购物车内容 -->
+    <view class="cartContent">
+        <!-- 标题 -->
+        <view class="cartTitle">购物车</view>
+        <!-- 购物车商品内容 -->
+        <view class="cartGoods">
+            <view class="goodsItem" wx:for="{{goods}}" wx:key="goods_id">
+                <!-- 商品图片 -->
+                <navigator>
+                    <image mode="widthFix" src="{{item.goods_small_logo}}"></image>
+                </navigator>
+                <!-- 商品信息 -->
+                <view class="right">
+                    <!-- 商品名称 -->
+                    <view class="goodsName">
+                        {{item.goods_name}}
+                    </view>
+                    <view class="bottom">
+                        <!-- 价格 -->
+                        <view class="goodsPrice">￥{{item.goods_price}}</view>
+                        <!-- 数量 -->
+                        <view class="num">
+                            <!-- 数值 -->
+                            <view class="text">x{{item.num}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- 底部工具栏 -->
+    <view class="toolbar">
+        <!-- 合计 -->
+        <view class="sum">
+            <view class="top">
+                <view>合计:</view>
+                <view class="money">￥{{allPrice}}</view>
+            </view>
+            <view class="bot">包含运费</view>
+        </view>
+        <!-- 结算 -->
+        <view class="buy" bindtap="pay">支付({{allNum}})</view>
+    </view>
+</view>

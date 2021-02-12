@@ -1,0 +1,29 @@
+.frist .content {
+  border-bottom: 2rpx solid #bbbaba;
+  display: flex;
+}
+.frist .content .left {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.frist .content .left image {
+  width: 70%;
+}
+.frist .content .right {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.frist .content .right .name {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.frist .content .right .price {
+  color: red;
+  font-size: 40rpx;
+}

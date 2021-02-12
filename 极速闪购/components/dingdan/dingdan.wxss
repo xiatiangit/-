@@ -1,0 +1,14 @@
+.dingdan .title {
+  display: flex;
+}
+.dingdan .title .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 15rpx 0;
+}
+.dingdan .title .active {
+  color: skyblue;
+  border-bottom: 5rpx solid skyblue;
+}

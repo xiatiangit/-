@@ -1,0 +1,11 @@
+<view class="search">
+    <!-- 搜索框 -->
+    <view class="title">
+        <input value="{{isValue}}" class="text" bindinput="search" data-value="{{value}}" placeholder="请输入要搜索的内容后点击外部即可"></input>
+        <button class="btn" size="mini" bindtap="cancel">取消</button>
+    </view>
+    <!-- 搜索内容 -->
+    <view class="content">
+        <view class="nameTitle" wx:for="{{searchData}}" wx:key="goods_id" bindtap="jump" data-goodsId="{{item.goods_id}}">{{item.goods_name}}</view>
+    </view>
+</view>

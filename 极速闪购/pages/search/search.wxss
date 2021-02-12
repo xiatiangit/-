@@ -1,0 +1,35 @@
+page {
+  background: #dadada;
+}
+.search .title {
+  display: flex;
+}
+.search .title .text {
+  padding-left: 20rpx;
+  margin: 20rpx;
+  background: #fff;
+  flex: 7;
+  height: 60rpx;
+  border-radius: 10rpx;
+}
+.search .title .btn {
+  font-size: 30rpx;
+  margin-right: 20rpx;
+  font-weight: normal;
+  margin-top: 20rpx;
+  flex: 1;
+  height: 60rpx;
+}
+.search .content .nameTitle {
+  padding-left: 20rpx;
+  text-align: left;
+  line-height: 70rpx;
+  margin: 0 20rpx;
+  height: 70rpx;
+  background: #fff;
+  border-bottom: 4rpx solid #dadada;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}

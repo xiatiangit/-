@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "sousuokuang":"../../components/sousuokuang/sousuokuang"
+  },
+  "navigationBarTitleText": "极速闪购"
+}

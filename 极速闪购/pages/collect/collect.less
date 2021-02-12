@@ -1,0 +1,40 @@
+page{
+  background: rgb(233, 231, 231);
+}
+.collect {
+  collect {
+    .content {
+      .goodsItem {
+        background: #fff;
+        display: flex;
+        margin: 15rpx 0;
+        border: 1rpx solid rgb(230, 228, 228);
+        .left {
+          margin-left: 20rpx;
+          flex: 1;
+          image {
+            width: 100%;
+          }
+        }
+        .rigth {
+          margin: 0 20rpx ;
+          flex: 3;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: flex-start;
+          .name {
+            display: -webkit-box;
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+          }
+          .price {
+            color: red;
+            font-size: 30rpx;
+          }
+        }
+      }
+    }
+  }
+}

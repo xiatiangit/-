@@ -1,0 +1,34 @@
+page {
+  background: #e9e7e7;
+}
+.collect collect .content .goodsItem {
+  background: #fff;
+  display: flex;
+  margin: 15rpx 0;
+  border: 1rpx solid #e6e4e4;
+}
+.collect collect .content .goodsItem .left {
+  margin-left: 20rpx;
+  flex: 1;
+}
+.collect collect .content .goodsItem .left image {
+  width: 100%;
+}
+.collect collect .content .goodsItem .rigth {
+  margin: 0 20rpx ;
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.collect collect .content .goodsItem .rigth .name {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.collect collect .content .goodsItem .rigth .price {
+  color: red;
+  font-size: 30rpx;
+}

@@ -1,0 +1,8 @@
+<view class="dingdan">
+    <view class="title">
+        <view class="item {{item.active?'active':''}}" wx:for="{{tab}}" wx:key="id"  bindtap="active" data-index="{{index}}">{{item.value}}</view>
+    </view>
+    <view class="content">
+        <slot></slot>
+    </view>
+</view>

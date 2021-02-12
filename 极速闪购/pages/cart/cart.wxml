@@ -1,0 +1,85 @@
+<view class="shopcart">
+    <!-- 收货地址 -->
+    <view class="address">
+        <!-- 收货地址不存在 -->
+        <button type="warn" plain bindtap="getAddress" wx:if="{{!address.userName}}">获取收货地址</button>
+        <!-- 收货地址存在 -->
+        <view wx:else class="shouhuoren">
+            <view class="left">
+                <!-- 收货人姓名 -->
+                <view class="name">收货人:{{address.userName}}</view>
+                <!-- 收货人地址 -->
+                <view class="dizhi">
+                    {{address.provinceName}}{{address.cityName}}{{address.countyName}}{{address.detailInfo}}
+                </view>
+            </view>
+            <!-- 收货人电话 -->
+            <view class="dianhua">{{address.telNumber}}</view>
+        </view>
+    </view>
+    <!-- 购物车内容 -->
+    <view class="cartContent">
+        <!-- 标题 -->
+        <view class="cartTitle">购物车</view>
+        <!-- 购物车商品内容 -->
+        <view class="cartGoods">
+            <!-- 购物车内有商品显示商品 -->
+            <block wx:if="{{goods.length !== 0}}">
+                <view class="goodsItem" wx:for="{{goods}}" wx:key="goods_id">
+                    <!-- 复选框 -->
+                    <view class="check">
+                        <checkbox-group bindtap="checkChange" data-index="{{index}}">
+                            <checkbox checked="{{item.check}}"></checkbox>
+                        </checkbox-group>
+                    </view>
+                    <!-- 商品图片 -->
+                    <navigator>
+                        <image mode="widthFix" src="{{item.goods_small_logo}}"></image>
+                    </navigator>
+                    <!-- 商品信息 -->
+                    <view class="right">
+                        <!-- 商品名称 -->
+                        <view class="goodsName">{{item.goods_name}}</view>
+                        <view class="bottom">
+                            <!-- 价格 -->
+                            <view class="goodsPrice">￥{{item.goods_price}}</view>
+                            <!-- 数量 -->
+                            <view class="num">
+                                <!-- 减 -->
+                                <view class="jian" bindtap="numSub" data-index="{{index}}">-</view>
+                                <!-- 数值 -->
+                                <view class="text">{{item.num}}</view>
+                                <!-- 加 -->
+                                <view class="jia" bindtap="numAdd" data-index="{{index}}">+</view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </block>
+            <!-- 购物车内没有商品显示其他 -->
+            <block wx:else>
+                <view class="wu">
+                    <view class="iconfont icon-gouwuche"></view>
+                    <view class="text">购物车内暂时没有商品哦</view>
+                </view>
+            </block>
+        </view>
+    </view>
+    <!-- 底部工具栏 -->
+    <view class="toolbar">
+        <!-- 全选 -->
+        <view class="checkAll" bindtap="check">
+            <checkbox checked="{{allCheck}}">全选</checkbox>
+        </view>
+        <!-- 合计 -->
+        <view class="sum">
+            <view class="top">
+                <view>合计:</view>
+                <view class="money">￥{{allPrice}}</view>
+            </view>
+            <view class="bot">包含运费</view>
+        </view>
+        <!-- 结算 -->
+        <view class="buy" bindtap="settlement">结算({{allNum}})</view>
+    </view>
+</view>

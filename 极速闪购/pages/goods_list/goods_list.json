@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "sousuokuang":"../../components/sousuokuang/sousuokuang",
+    "tabs":"../../components/tabs/tabs"
+  },
+  "enablePullDownRefresh":true,
+  "backgroundTextStyle":"dark"
+}

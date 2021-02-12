@@ -1,0 +1,31 @@
+<view class="dingdan">
+    <!-- 标签栏 -->
+    <dingdan tab="{{tab}}" bind:tabItemChange="tabsItemChange">
+        <!-- 全部订单 -->
+        <block wx:if="{{tab[0].active}}">
+            <view class="goods" wx:for="{{order}}" wx:key="goods_id">
+                <!-- 订单编号 -->
+                <view class="num content">
+                    <view class="word">订单编号</view>
+                    <view class="value">{{item.add_time}}</view>
+                </view>
+                <!-- 订单价格 -->
+                <view class="price content">
+                    <view class="word">订单价格</view>
+                    <view class="value">￥{{item.goods_price}}</view>
+                </view>
+                <!-- 订单日期 -->
+                <view class="time content">
+                    <view class="word">订单日期</view>
+                    <view class="value">{{item.time}}</view>
+                </view>
+            </view>
+        </block>
+        <!-- 待付款 -->
+        <block wx:elif="{{tab[1].active}}"></block>
+        <!-- 待收货 -->
+        <block wx:elif="{{tab[2].active}}"></block>
+        <!-- 退款/退货 -->
+        <block wx:elif="{{tab[3].active}}"></block>
+    </dingdan>
+</view>

@@ -1,0 +1,29 @@
+<view class="shouye">
+    <!-- 搜索框 -->
+    <sousuokuang></sousuokuang>
+    <!-- 轮播图 -->
+    <view class="lunbotu">
+        <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="3000">
+            <swiper-item wx:for="{{swiperList}}" wx:key="goods_id">
+                <image mode="widthFix" src="{{item.image_src}}"></image>
+            </swiper-item>
+        </swiper>
+    </view>
+    <!-- 导航 -->
+    <view class="daohang">
+        <navigator wx:for="{{catesList}}" wx:key="name">
+            <image mode="widthFix" src="{{item.image_src}}"></image>
+        </navigator>
+    </view>
+    <!-- 排列楼层 -->
+    <view class="louceng">
+        <view class="floor" wx:for="{{floorList}}" wx:key="floor_title">
+            <navigator class="title">
+                <image mode="widthFix" src="{{item.floor_title.image_src}}"></image>
+            </navigator>
+            <navigator wx:for="{{item.product_list}}" wx:key="name" class="content">
+                <image mode="{{index===0?'widthFix':'scaleToFill'}}" src="{{item.image_src}}"></image>
+            </navigator>
+        </view>
+    </view>
+</view>

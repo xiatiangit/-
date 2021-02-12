@@ -1,0 +1,25 @@
+<view class="fenlei">
+    <!-- 搜索框 -->
+    <sousuokuang></sousuokuang>
+    <!-- 内容区 -->
+    <view class="content">
+        <!-- 左侧菜单 -->
+        <scroll-view class="left" scroll-y="{{true}}">
+            <view class="name {{index===activeIndex?'active':''}}" wx:for="{{menuList}}" wx:key="index" bindtap='active' data-index="{{index}}">{{item}}</view>
+        </scroll-view>
+        <!-- 右侧分类 -->
+        <scroll-view scroll-top="{{scrtop}}" class="right" scroll-y="{{true}}">
+            <view class="goods" wx:for="{{catesList}}" wx:key="cat_id" wx:for-index="index1" wx:for-item="item1">
+                <!-- 分类标题 -->
+                <view class="title">{{item1.cat_name}}</view>
+                <!-- 分类内容 -->
+                <view class="text">
+                    <navigator wx:for="{{item1.children}}" wx:key="cat_id" wx:for-index="index2" wx:for-item="item2" url="../goods_list/goods_list?cid={{item2.cat_id}}">
+                        <image src="{{item2.cat_icon}}" mode="widthFix"></image>
+                        <view class="goodsname">{{item2.cat_name}}</view>
+                    </navigator>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+</view>
